@@ -57,16 +57,27 @@ Controller – Handles requests, responses, and application flow
 
 📂 Project Structure
 Food_app/
+
 │
+
 ├── src/
+
 │   ├── controller/
+
 │   ├── model/
+
 │   ├── dao/
+
 │   └── view/
+
 │
+
 ├── pom.xml
+
 ├── .gitignore
+
 └── README.md
+
 
 ⚙️ Setup Instructions
 
