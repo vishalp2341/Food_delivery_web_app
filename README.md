@@ -5,6 +5,7 @@ This project demonstrates backend integration, database connectivity, and dynami
 
 🚀 Features
 
+```text
 User-friendly food ordering interface
 
 Dynamic quantity counter using JavaScript
@@ -16,8 +17,10 @@ JDBC connectivity for database operations
 MVC design pattern for clean separation of concerns
 
 Modular and scalable project structure
+```
 
 🛠️ Tech Stack
+```
 Frontend
 
 HTML
@@ -45,16 +48,19 @@ Eclipse IDE
 Maven
 
 Git & GitHub
+```
 
 🧩 Project Architecture (MVC)
+```
 
 Model – Handles business logic and database operations (DAO, JDBC)
 
 View – UI components using HTML, CSS, JSP
 
 Controller – Handles requests, responses, and application flow
+```
 
-## 📂 Project Structure
+📂 Project Structure
 
 ```text
 Food_app/
@@ -73,6 +79,7 @@ Food_app/
 
 
 ⚙️ Setup Instructions
+```
 
 Clone the repository
 
@@ -84,6 +91,7 @@ Open the project in Eclipse
 Configure database credentials in JDBC connection file
 
 Run the project on Apache Tomcat
+```
 
 🎯 What I Learned
 
@@ -98,6 +106,7 @@ Structuring scalable Java web applications
 Version control with Git & GitHub
 
 👨‍💻 Author
+```
 
 Vishal Prakash
 
@@ -106,6 +115,7 @@ Java Full Stack Developer
 Interested in Backend Development & Web Applications
 
 🔗 GitHub: https://github.com/vishalp2341
+```
 
 📌 Note
 
