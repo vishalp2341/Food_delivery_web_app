@@ -54,8 +54,9 @@ View – UI components using HTML, CSS, JSP
 
 Controller – Handles requests, responses, and application flow
 
+## 📂 Project Structure
 
-📂 Project Structure
+```text
 Food_app/
 │
 ├── src/
@@ -67,6 +68,8 @@ Food_app/
 ├── pom.xml
 ├── .gitignore
 └── README.md
+```
+
 
 
 ⚙️ Setup Instructions
