@@ -1,0 +1,534 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Styles for the View Menu Button */
+.view-menu-button {
+  background-color: #e35739;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center; /* Center text inside button */
+  display: inline-block; /* Ensure button is treated as inline-block */
+  margin-top: 10px;
+  text-decoration: none; /* Remove underline for links */
+}
+
+.view-menu-button:hover {
+  background-color: #d34327;
+}
+
+/* Wrapper for login and register forms */
+.wrapper {
+  background: #fff;
+  padding: 40px; /* Increased padding for more space inside the box */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Increased max-width for a larger box */
+  box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 15px; /* Increased padding for larger input fields */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px; /* Increased font size for better readability */
+}
+
+.input-field label {
+  position: absolute;
+  top: 0;
+  left: 15px; /* Adjusted for better alignment with increased padding */
+  pointer-events: none;
+  transition: 0.3s;
+  color: #888;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+  top: -15px;
+  left: 10px; /* Adjusted for better alignment with increased padding */
+  color: #333;
+  font-size: 14px; /* Increased font size for better readability */
+}
+
+button {
+  padding: 15px; /* Increased padding for a larger button */
+  border: none;
+  border-radius: 5px;
+  background-color: #e35739;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px; /* Increased font size for better readability */
+}
+
+button:hover {
+  background-color: #d34327; /* Slightly darker color on hover */
+}
+
+.login, .register {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login a, .register a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login a:hover, .register a:hover {
+  text-decoration: underline;
+}
+
+/* New section for restaurant display */
+.restaurant-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust spacing between columns */
+  width: 90%;
+}
+
+.restaurant-column {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: calc(33.333% - 30px); /* Ensure three items per row, considering margin */
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.restaurant-column:hover {
+  background-color: #f2b4a6;
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 180px; /* Consistent height for all images */
+  object-fit: cover; /* Ensures aspect ratio is maintained and image is properly scaled */
+  border-radius: 10px;
+  margin-bottom: 15px; /* Increased margin for spacing */
+  border: 2px solid #f4f4f4; /* Light border around images */
+}
+
+.restaurant-details {
+  text-align: center;
+}
+
+.restaurant-details h2 {
+  margin: 10px 0;
+  font-size: 22px; /* Larger font size for restaurant names */
+  color: #333; /* Darker text color for better readability */
+}
+
+.restaurant-details p {
+  margin: 8px 0;
+  font-size: 16px; /* Increased font size for better readability */
+  color: #666; /* Lighter text color for description */
+}
+
+.restaurant-details .status {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.restaurant-details .status.open {
+  color: green;
+}
+
+.restaurant-details .status.closed {
+  color: red;
+}
+
+
+.restaurant-details .rating {
+  margin: 10px 0; /* Margin for spacing around rating */
+  font-size: 16px; /* Font size for readability */
+  color: #333; /* Text color */
+}
+
+.restaurant-details .rating .star {
+  width: 20px; /* Adjust star size */
+  height: 20px; /* Adjust star size */
+  margin-right: 2px; /* Space between stars */
+  vertical-align: middle; /* Align stars vertically */
+}
+.restaurant-details .icon {
+  margin-right: 10px; /* More space for icons */
+  vertical-align: middle;
+  width: 20px; /* Larger icons for better visibility */
+  height: 20px;
+}
+
+.welcome {
+margin-top:2%;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px; /* Space between welcome message and restaurant columns */
+}
+
+.status {
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+}
+
+.status.closed {
+  color: red;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* Styles for the View Menu Button */
+.view-menu-button {
+  background-color: #e35739;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.view-menu-button:hover {
+  background-color: #d34327;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff; /* Background color for the header */
+  border-bottom: 2px solid #e35739; /* Bottom border to separate header */
+  padding: 10px 20px; /* Padding around the header content */
+  position: fixed; /* Fix the header to the top */
+  width: 100%; /* Full width */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Space between the title and nav items */
+  align-items: center; /* Center align items vertically */
+  max-width: 1200px; /* Limit width */
+  margin: 0 auto; /* Center the header */
+}
+
+header h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 24px; /* Font size for the title */
+  color: #333; /* Dark text color */
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar ul {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flex display for horizontal layout */
+  gap: 15px; /* Space between links */
+}
+
+.navbar li {
+  display: inline; /* Display list items inline */
+}
+
+.nav-link {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Dark text color */
+  font-size: 16px; /* Font size for the links */
+  font-weight: bold; /* Bold text for emphasis */
+  padding: 10px 15px; /* Padding around links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.nav-link:hover {
+  background-color: #e35739; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+.nav-link:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(227, 87, 57, 0.5); /* Custom focus outline */
+}
+/* New section for menu items display */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust spacing between columns */
+  width: 80%;
+}
+
+.menu-column {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: calc(33.333% - 30px); /* Ensure three items per row, considering margin */
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.menu-column:hover {
+  background-color: #f2b4a6;
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.menu-image img {
+  width: 100%;
+  height: 180px; /* Consistent height for all images */
+  object-fit: cover; /* Ensures aspect ratio is maintained and image is properly scaled */
+  border-radius: 10px;
+  margin-bottom: 15px; /* Increased margin for spacing */
+  border: 2px solid #f4f4f4; /* Light border around images */
+}
+
+.menu-details {
+  text-align: center;
+}
+
+.menu-details h4 {
+  margin: 10px 0;
+  font-size: 20px; /* Larger font size for item names */
+  color: #333; /* Darker text color for better readability */
+}
+
+.menu-details p {
+  margin: 8px 0;
+  font-size: 16px; /* Increased font size for better readability */
+  color: #666; /* Lighter text color for description */
+}
+
+.menu-details .price {
+  font-weight: bold;
+  color: #e35739; /* Highlight price */
+}
+
+.menu-details .rating {
+  margin: 10px 0; /* Margin for spacing around rating */
+  font-size: 16px; /* Font size for readability */
+  color: #333; /* Text color */
+}
+
+.menu-details .rating .star {
+  width: 20px; /* Adjust star size */
+  height: 20px; /* Adjust star size */
+  margin-right: 2px; /* Space between stars */
+  vertical-align: middle; /* Align stars vertically */
+}
+
+
+.menu-details .status {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu-details .status.available {
+  color: green;
+}
+
+.menu-details .status.unavailable {
+  color: red;
+}
+
+.menu-details .icon {
+  margin-right: 5px; /* Space between icon and text */
+  vertical-align: middle;
+  width: 20px; /* Larger icons for better visibility */
+  height: 20px;
+}
+
+/* Styles for the quantity container */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #f4f4f4; /* Light background for the container */
+  border: 1px solid #ddd; /* Border around the container */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px; /* Padding inside the container */
+  width: 120px;  /* Set a specific width for + and - buttons */
+  height: 30px;
+  margin-left: 96px;
+}
+
+.quantity-container button {
+  background-color: #e35739;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 30px;  /* Set a specific width for + and - buttons */
+  height: 30px;  /* Set a specific height for + and - buttons */
+  font-size: 18px;  /* Adjust font size to fit the button */
+  display: inline-flex;  /* Align content horizontally */
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;  /* Center content vertically */
+  cursor: pointer;
+}
+
+.quantity-container input {
+  width: 50px;  /* Set width for the quantity input */
+  height: 30px;  /* Set height for the quantity input */
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;  /* Adjust font size to fit the input */
+  outline: none;
+}
+
+.quantity-container button:hover {
+  background-color: #d34327;
+  transform: translateY(-2px);
+}
+
+
+
+.add-to-cart-button {
+  background-color: #4CAF50;
+  color: #fff;
+  width: 120px;  /* Set a specific width */
+  height: 35px;  /* Set a specific height */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-flex;  /* Align content horizontally */
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;  /* Center content vertically */
+  margin-left: 105px;
+}
+
+
+.add-to-cart-button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for Cart Page */
+.cart-page-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.cart-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e35739;
+    margin-top: 20px;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update-cart-button {
+    background-color: #e35739;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.update-cart-button:hover {
+    background-color: #d34327;
+}
+
+.checkout-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+.remove-link {
+    color: #e35739;
+    text-decoration: none;
+}
+
+.remove-link:hover {
+    text-decoration: underline;
+}
+
